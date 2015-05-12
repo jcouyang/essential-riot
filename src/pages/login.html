@@ -1,0 +1,22 @@
+<login>
+  <form onsubmit="{ login }">
+    <span class="error"> {error_msg} </span>
+    <input name="username" type="text" placeholder="username">
+    <input name="password" type="password" placeholder="password">
+    <button type="submit">login</button>
+  </form>
+
+  <script>
+    var db =require('../store/db.js')
+      this.login = async function() {
+        var {success} = await db.login({
+          username: this.username.value,
+          password: this.password.value
+        });
+        if(success)
+          riot.route('items');
+        else
+          this.error_msg = 'hehe'
+      }
+  </script>
+</login>

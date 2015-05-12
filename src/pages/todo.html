@@ -1,0 +1,52 @@
+<todo>
+
+  <h3>{ title || opts.title }</h3>
+
+  <ul>
+    <li each={ items.filter(filter) }>
+      <label class={ completed: done }>
+        <input type="checkbox" checked={ done } onclick={ parent.toggle }> { title }
+      </label>
+    </li>
+  </ul>
+
+  <form onsubmit={ add }>
+    <input name="input" onkeyup={ edit }>
+    <button disabled={ !text }>Add #{ items.filter(filter).length + 1 }</button>
+  </form>
+
+  <script>
+    var db = require('../store/db.js')
+      this.items = opts.items || []
+
+    edit(e) {
+      this.text = e.target.value
+    }
+
+    add(e) {
+      if (this.text) {
+        this.items.push({ title: this.text })
+          this.text = this.input.value = '';
+      }
+    }
+
+    filter(item) {
+      return !item.hidden;
+    }
+
+    toggle(e) {
+      var item = e.item
+      item.done = !item.done
+      return true;
+    }
+
+    this.on('mount',async function(){
+      var todo = await db.getItems();
+      this.title = todo.title
+      this.items = todo.items;
+      this.update();
+    })
+
+  </script>
+
+</todo>
