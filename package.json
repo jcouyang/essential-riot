@@ -1,9 +1,28 @@
 {
   "name": "essential-riot",
-  "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "version": "0.1.0",
+  "description": "A minimal skeleton for building testable Riot apps using ES7 async function",
+  "author": "Jichao Ouyang",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jcouyang/essential-riot.git"
+  },
+  "keywords": [
+    "skeleton",
+    "template",
+    "riot",
+    "muut",
+    "quickstart",
+    "es7",
+    "es6",
+    "async",
+    "csp"
+  ],
+  "bugs": {
+    "url": "https://github.com/jcouyang/essential-riot/issues"
+  },
+  "homepage": "https://github.com/jcouyang/essential-riot",
   "dependencies": {
     "riot": "^2.0.15",
     "sparkler": "^0.3.5"
