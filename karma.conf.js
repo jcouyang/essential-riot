@@ -1,7 +1,7 @@
 module.exports = function(config) {
   config.set({
     frameworks: ['jasmine'],
-    browsers: ['PhantomJS'],
+    browsers: ['Firefox'],
     files: [
       // all files ending in "_test"
       'tests/*_test.js',
@@ -33,7 +33,7 @@ module.exports = function(config) {
     plugins: [
       "karma-webpack",
       "karma-jasmine",
-      'karma-phantomjs-launcher'
+      'karma-firefox-launcher'
     ]
 
   });
