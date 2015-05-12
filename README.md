@@ -2,6 +2,8 @@
 
 > A minimal skeleton for building testable Riot apps using ES7 async function
 
+[![Build Status](https://travis-ci.org/jcouyang/essential-riot.svg)](https://travis-ci.org/jcouyang/essential-riot)
+
 ## start
 1. `npm start`
 2. open http://localhost:5555
