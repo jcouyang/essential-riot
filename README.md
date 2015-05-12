@@ -1,4 +1,4 @@
-#Essential Riot
+#Essential [Riot](https://muut.com/riotjs/)
 
 > A minimal skeleton for building testable Riot apps using ES7 async function
 
